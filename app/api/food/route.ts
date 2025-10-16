@@ -37,6 +37,5 @@ export async function POST(request: NextRequest) {
 
 export const GET = async () => {
   const foods = await getAllFoods();
-  console.log(foods);
-  return NextResponse.json({ message: "Hello" }, { status: 200 });
+  return NextResponse.json({ data: foods }, { status: 200 });
 };
